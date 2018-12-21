@@ -1,0 +1,34 @@
+﻿@model PelaezAutoPartsDiego.Models.Usager
+
+
+ 
+<div class=" text-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h1>Connect</h1>
+                @using (Html.BeginForm("SignOut", "Home", FormMethod.Post))
+                {
+                    <table class="table  table-bordered  table-hover table-condensed">
+
+                        <tr>
+                            <td>@Html.LabelFor(Model => Model.UsagerP)</td>
+                            <td>@Html.EditorFor(Model => Model.UsagerP)</td>
+                        </tr>
+                        <tr>
+                            <td>@Html.LabelFor(Model => Model.Password)</td>
+                            <td>@Html.EditorFor(Model => Model.Password)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Connect" class=" btn btn-primary" /></td>
+                        </tr>
+                    </table>
+                }
+                <p class="alert-danger">@ViewBag.Message1</p>
+                <div class="col-sm-4"></div>
+            </div>
+            </div>
+        </div>
+    </div>
